@@ -1,5 +1,5 @@
 <h2 align="center">
-    ───「 sᴜᴍᴏ ᴍᴜsɪᴄ 」───
+    ───「 𝐌ᴇᴛᴀ 𝐌ᴜsɪᴄ 」───
 </h2>
 
 <p align="center">
@@ -14,7 +14,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/TEAMPURVI/SONALI"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/JayKumar102030405060707090/MetaMusic"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
 
 <br />
 
@@ -41,7 +41,7 @@
    ```
 5. **Clone the Repository**
    ```bash
-   git clone https://github.com/TEAMPURVI/SONALI && cd SONALI
+   git clone https://github.com/JayKumar102030405060707090/MetaMusic && cd MetaMusic
    ```
 6. **Install Requirements**
    ```bash
@@ -80,11 +80,11 @@
 </h3>
 
 <p align="center">
-<a href="https://t.me/PURVI_UPDATES"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/KomalMusicUPDATES"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 <p align="center">
-<a href="https://t.me/PURVI_SUPPORT"><img src="https://img.shields.io/badge/-Update%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/Komal_Music_SUPPORT"><img src="https://img.shields.io/badge/-Update%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 <br />
@@ -93,4 +93,4 @@
 
 <br />
 
-- <b> _Sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴀʟᴘʜᴀ](https://github.com/TEAMPURVI) ғᴏʀ [ɴᴇᴡ ᴍᴜsɪᴄ](https://github.com/Im-NotCoder/NhiPta)._ </b>
+- <b> _Sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ɴᴏᴛᴛʏ ʙᴏʏ](https://t.me/INNOCENT_FUCKER) ғᴏʀ [ɴᴇᴡ ᴍᴜsɪᴄ](https://t.me/INNOCENT_FUCKER)._ </b>
