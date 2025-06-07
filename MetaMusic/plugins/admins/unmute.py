@@ -1,7 +1,7 @@
 from MetaMusic import app
 from pyrogram import filters,enums
 from pyrogram.types import ChatPermissions 
-from MetaMusic.utils.Komal_ban import admin_filter
+from MetaMusic.utils.Meta_ban import admin_filter
 
 @app.on_message(filters.command("unmuteall") & admin_filter)
 async def unmute_all(_,msg):
