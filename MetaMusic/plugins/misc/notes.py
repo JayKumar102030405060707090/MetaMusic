@@ -1,7 +1,7 @@
 from MetaMusic import app
 from config import BOT_USERNAME
 from pyrogram import filters
-from MetaMusic.utils.Komal_ban import admin_filter
+from MetaMusic.utils.Meta_ban import admin_filter
 from MetaMusic.mongo.notesdb import *
 from MetaMusic.utils.notes_func import GetNoteMessage, exceNoteMessageSender, privateNote_and_admin_checker
 from MetaMusic.utils.yumidb import user_admin
