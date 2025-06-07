@@ -12,7 +12,6 @@ from strings import get_string, helpers
 from MetaMusic.utils.stuffs.buttons import BUTTONS
 from MetaMusic.utils.stuffs.helper import Helper
 
-# Video list for help command
 SHASHANK_VD = ["https://telegra.ph/file/89c5023101b65f21fb401.mp4",
           "https://telegra.ph/file/bbc914cce6cce7f607641.mp4",
           "https://telegra.ph/file/abc578ecc222d28a861ba.mp4",
