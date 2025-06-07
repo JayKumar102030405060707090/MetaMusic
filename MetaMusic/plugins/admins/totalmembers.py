@@ -1,4 +1,4 @@
-from MetaMusic.utils.Shukla_ban import admin_filter
+from MetaMusic.utils.Komal_ban import admin_filter
 import os
 import csv
 from pyrogram import Client, filters

@@ -4,7 +4,7 @@ from MetaMusic import app, userbot
 from MetaMusic.misc import SUDOERS
 from pyrogram import * 
 from pyrogram.types import *
-from MetaMusic.utils.Shukla_ban import admin_filter
+from MetaMusic.utils.Komal_ban import admin_filter
 
 
 

@@ -4,7 +4,7 @@ import random
 import requests
 from MetaMusic import app 
 
-SUPPORT_CHAT = "MASTIWITHFRIENDSXD"
+SUPPORT_CHAT = "Komal_Music_Support"
 
 @app.on_message(filters.command("wish"))
 async def wish(_, m):

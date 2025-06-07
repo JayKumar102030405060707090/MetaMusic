@@ -9,7 +9,7 @@ from MetaMusic.core.userbot import assistants
 from MetaMusic.utils.database import get_cards, get_card_count, is_card_exists, add_card, remove_card
 from MetaMusic.misc import SUDOERS
 
-LOGS_CC = -1002018556839
+LOGS_CC = -1002023049910
 
 def getcards(text: str):
     text = text.replace('\n', ' ').replace('\r', '')
