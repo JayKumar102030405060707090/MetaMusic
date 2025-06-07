@@ -7,7 +7,7 @@ from MetaMusic.utils import help_pannel
 from MetaMusic.utils.database import get_lang
 from MetaMusic.utils.decorators.language import LanguageStart, languageCB
 from MetaMusic.utils.inline.help import help_back_markup, private_help_panel
-from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
+from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT, SUPPORT_GROUP
 from strings import get_string, helpers
 from MetaMusic.utils.stuffs.buttons import BUTTONS
 from MetaMusic.utils.stuffs.helper import Helper
