@@ -1,8 +1,7 @@
+import random
 from typing import Union
-
 from pyrogram import filters, types
-from pyrogram.types import InlineKeyboardMarkup, Message
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MetaMusic import app
 from MetaMusic.utils import help_pannel
 from MetaMusic.utils.database import get_lang
@@ -10,13 +9,28 @@ from MetaMusic.utils.decorators.language import LanguageStart, languageCB
 from MetaMusic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
 from strings import get_string, helpers
+from MetaMusic.utils.stuffs.buttons import BUTTONS
+from MetaMusic.utils.stuffs.helper import Helper
 
+# Video list for help command
+SHASHANK_VD = [
+    "https://telegra.ph/file/89c5023101b65f21fb401.mp4",
+    "https://telegra.ph/file/bbc914cce6cce7f607641.mp4",
+    "https://telegra.ph/file/abc578ecc222d28a861ba.mp4",
+    "https://telegra.ph/file/065f40352707e9b5b7c15.mp4",
+    "https://telegra.ph/file/52ceaf02eae7eed6c9fff.mp4",
+    "https://telegra.ph/file/299108f6ac08f4e65e47a.mp4",
+    "https://telegra.ph/file/7a4e08bd04d628de71fc1.mp4",
+    "https://telegra.ph/file/0ad8b932fe5f7684f941c.mp4",
+    "https://telegra.ph/file/95ebe2065cfb1ac324a1c.mp4",
+    "https://telegra.ph/file/98cf22ccb987f9fedac5e.mp4",
+    "https://telegra.ph/file/f1b1754fc9d01998f24df.mp4",
+    "https://telegra.ph/file/421ee22ed492a7b8ce101.mp4"
+]
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
 @app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
-async def helper_private(
-    client: app, update: Union[types.Message, types.CallbackQuery]
-):
+async def helper_private(client: app, update: Union[types.Message, types.CallbackQuery]):
     is_callback = isinstance(update, types.CallbackQuery)
     if is_callback:
         try:
@@ -38,19 +52,17 @@ async def helper_private(
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_photo(
-            photo=START_IMG_URL,
+        await update.reply_video(
+            random.choice(SHASHANK_VD),
             caption=_["help_1"].format(SUPPORT_GROUP),
             reply_markup=keyboard,
         )
-
 
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
     await message.reply_text(_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
-
 
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
@@ -88,5 +100,37 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(helpers.HELP_14, reply_markup=keyboard)
     elif cb == "hb15":
         await CallbackQuery.edit_message_text(helpers.HELP_15, reply_markup=keyboard)
-    elif cb == "hb16":
-        await CallbackQuery.edit_message_text(helpers.HELP_16, reply_markup=keyboard)
+
+@app.on_callback_query(filters.regex("mbot_cb") & ~BANNED_USERS)
+async def mbot_cb(client, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        Helper.HELP_M, reply_markup=InlineKeyboardMarkup(BUTTONS.MBUTTON)
+    )
+
+@app.on_callback_query(filters.regex('managebot123') & ~BANNED_USERS)
+async def managebot_cb(client, CallbackQuery):
+    callback_data = CallbackQuery.data.strip()
+    cb = callback_data.split(None, 1)[1]
+    language = await get_lang(CallbackQuery.message.chat.id)
+    _ = get_string(language)
+    keyboard = help_pannel(_, True)
+    if cb == "settings_back_helper":
+        await CallbackQuery.edit_message_text(
+            _["help_1"].format(SUPPORT_GROUP), reply_markup=keyboard
+        )
+
+@app.on_callback_query(filters.regex('mplus') & ~BANNED_USERS)
+async def mplus_cb(client, CallbackQuery):
+    callback_data = CallbackQuery.data.strip()
+    cb = callback_data.split(None, 1)[1]
+    keyboard = InlineKeyboardMarkup(
+        [[InlineKeyboardButton("Back", callback_data="mbot_cb")]]
+    )
+    if cb == "Okieeeeee":
+        await CallbackQuery.edit_message_text(
+            "`Something went wrong.`", reply_markup=keyboard, parse_mode="Markdown"
+        )
+    else:
+        await CallbackQuery.edit_message_text(
+            getattr(Helper, cb), reply_markup=keyboard
+        )
