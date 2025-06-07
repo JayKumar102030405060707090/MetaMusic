@@ -16,6 +16,9 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
+
+# make your bots privacy from telegra.ph and put your url here 
+PRIVACY_LINK = getenv("PRIVACY_LINK", "https://telegra.ph/Privacy-Policy-for-AviaxMusic-08-14")
 # -------------------------------------------------------
 OWNER_USERNAME = getenv("OWNER_USERNAME","INNOCENT_FUCKER")
 # --------------------------------------------------------
