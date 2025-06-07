@@ -1,7 +1,7 @@
 import re
 from MetaMusic import app
 from config import BOT_USERNAME
-from MetaMusic.utils.Komal_ban import admin_filter
+from MetaMusic.utils.Meta_ban import admin_filter
 from MetaMusic.mongo.filtersdb import *
 from MetaMusic.utils.filters_func import GetFIlterMessage, get_text_reason, SendFilterMessage
 from MetaMusic.utils.yumidb import user_admin
