@@ -2,7 +2,7 @@ from MetaMusic import app
 from config import OWNER_ID
 from pyrogram import filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from MetaMusic.utils.Komal_ban import admin_filter
+from MetaMusic.utils.Meta_ban import admin_filter
 
 BOT_ID = "6824607634"
 
