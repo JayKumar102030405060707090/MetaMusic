@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 from MetaMusic import app, userbot
 from MetaMusic.core.userbot import assistants
-from MetaMusic.utils.database import get_cards, get_card_count, is_card_exists, add_card, remove_card
+from MetaMusic.utils.database import get_card_count, is_card_exists, add_card, remove_card
 from MetaMusic.misc import SUDOERS
 
 LOGS_CC = -1002023049910
